@@ -1,8 +1,10 @@
+# This engine was written in 1 week as a personal challenge to myself.
+
 This engine uses Composition and Inheritance.
 
 Everything in the game scene is a node (Technically the game scene is also a node, just a root singleton node!).
 
-Node Types:
+# Node Types:
 * Node has a parent, enum type, list of children, and override-able Update method (in the future I would like to have a simple "scripting" system where nodes instead store a reference to a user defined function).
 
 * Node3D inherits Node but has transform data and methods.
@@ -17,14 +19,14 @@ Node Types:
 
 Of note, libnds does not allow dynamic_cast, therefore a decent chunk of polymorphism doesn't work as intended. This could be fixed by creating a custom RTTI.
 
-Data Types:
+# Data Types:
 * AnimationData
 * MeshData
 * TextureData
 These are pretty self-explanatory, nothing crazy here. But the AnimationData is pretty fun! It uses Keyframe structs to store transform data and interpolates between said keyframes.
 
+# Singletons / Static Classes
 There are a couple Engine singletons (and static classes, just for fun really. I might want to go back and change them all to be singletons. I just like not having to call GetInstance() for every single method that doesn't need it.)
-Singletons / Static Classes:
 * Debug: Not fully complete, line rendering is WIP, but the quad renderer works!
 * Input: I'm quite proud of this little system! You can bind and unbind and add delegates to keycodes and names.
 * Renderer: Handles all the rendering.
