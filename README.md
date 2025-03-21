@@ -23,6 +23,7 @@ Of note, libnds does not allow dynamic_cast, therefore a decent chunk of polymor
 * AnimationData
 * MeshData
 * TextureData
+
 These are pretty self-explanatory, nothing crazy here. But the AnimationData is pretty fun! It uses Keyframe structs to store transform data and interpolates between said keyframes.
 
 # Singletons / Static Classes
